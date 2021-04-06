@@ -1,4 +1,4 @@
-var intestazione='<svg viewBox="0 0 100 100"> <path d=\"';
+var intestazione='<svg viewBox="-10 -10 120 120"> <path d=\"';
 var coda="\" /></svg>";
 var testo="";
 
