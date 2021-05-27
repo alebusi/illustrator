@@ -3,6 +3,7 @@ var coda="\" /></svg>";
 var testo="";
 
 function scriviTxt(car) {
+  testo=document.getElementById("testo").value;
   if (car == "x") {
     testo=testo.substring(0, testo.length - 1);
   }
@@ -15,6 +16,6 @@ function scriviTxt(car) {
   else {
     testo=testo+car;
   }
-  document.getElementById("testo").innerHTML = testo;
+  document.getElementById("testo").value = testo;
   document.getElementById("anteprima").innerHTML = testo;  
 }
