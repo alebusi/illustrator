@@ -69,5 +69,7 @@ path {
 
 #anteprima {
     height: 500px;
-    margin-left: 300px;
+    top: 2100px;
+    left: 10vw;
+    position: absolute;
 }
