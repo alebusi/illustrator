@@ -16,4 +16,5 @@ function scriviTxt(car) {
     testo=testo+car;
   }
   document.getElementById("testo").innerHTML = testo;
+  document.getElementById("anteprima").innerHTML = testo;  
 }
