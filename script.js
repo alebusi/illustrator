@@ -2,7 +2,7 @@ var intestazione='<svg viewBox="-10 -10 120 120"> <path d=\"';
 var coda="\" /></svg>";
 var testo="";
 var pos=0;
-var cursore="]";
+var cursore="_";
 
 function scriviTxt(car) {
   testo=document.getElementById("testo").value;
@@ -25,12 +25,12 @@ function scriviTxt(car) {
 }
 function muoviCursore(direzione) {
   testo=document.getElementById("testo").value;
-  testo=testo.replace("]", "");
+  testo=testo.replace(cursore, "");
   //alert("pos"+pos);
   //if (pos > 0 && pos < testo.length-1) {
     pos=pos+direzione;
     //alert("pos"+pos);
-    testo=testo.substring(0,pos)+ "]" + testo.substring(pos);
+    testo=testo.substring(0,pos)+ cursore + testo.substring(pos);
     document.getElementById("testo").value = testo;
   //}
 }
