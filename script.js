@@ -26,11 +26,11 @@ function scriviTxt(car) {
 function muoviCursore(direzione) {
   testo=document.getElementById("testo").value;
   testo=testo.replace(cursore, "");
-  //alert("pos"+pos);
-  //if (pos > 0 && pos < testo.length-1) {
+  //alert("pos"+pos+"lt "+testo.length);
+  if (pos+direzione >-1 && pos+direzione <= testo.length) {
     pos=pos+direzione;
     //alert("pos"+pos);
     testo=testo.substring(0,pos)+ cursore + testo.substring(pos);
     document.getElementById("testo").value = testo;
-  //}
+  }
 }
