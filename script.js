@@ -1,4 +1,4 @@
-var intestazione='<svg viewBox="-10 -10 120 120"> <path d=\"';
+var intestazione='<svg viewBox="-10 -10 120 120"> <path d=\"M0 0 ';
 var coda="\" /></svg>";
 var testo="";
 var pos=0;
@@ -12,9 +12,11 @@ function scriviTxt(car) {
   }
   else if (car == '<') {
     testo=testo+intestazione;
+    pos+=intestazione.length;
   }
   else if (car == ">") {
     testo=testo+coda;
+    pos+=coda.length;
   }
   else {
     testo=testo.substring(0,pos)+ car + testo.substring(pos+1);
