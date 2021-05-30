@@ -1,4 +1,4 @@
-var intestazione='<svg viewBox="-10 -10 120 120"> <path d=\"M0 0 _';
+var intestazione='<svg viewBox="-10 -10 120 120"> <path d=\"M0 0';
 var coda="\" /></svg>";
 var testo="";
 var pos=0;
@@ -11,7 +11,7 @@ function scriviTxt(car) {
     testo=testo.substring(0,pos) + testo.substring(pos+1);
   }
   else if (car == '<') {
-    testo=testo+intestazione;
+    testo=intestazione+" "+testo;
     pos+=intestazione.length;
   }
   else if (car == ">") {
@@ -23,7 +23,8 @@ function scriviTxt(car) {
     pos+=1;
   }
   document.getElementById("testo").value = testo;
-  document.getElementById("anteprima").innerHTML = testo;  
+  testoAnteprima=intestazione+" "+testo.replace(intestazione,"").replace(coda,"")+coda;
+  document.getElementById("anteprima").innerHTML=testoAnteprima;
 }
 function muoviCursore(direzione) {
   testo=document.getElementById("testo").value;
