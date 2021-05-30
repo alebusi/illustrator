@@ -11,7 +11,7 @@ function scriviTxt(car) {
     testo=testo.substring(0,pos) + testo.substring(pos+1);
   }
   else if (car == '<') {
-    testo=intestazione+" "+testo;
+    testo=intestazione+testo;
     pos+=intestazione.length;
   }
   else if (car == ">") {
@@ -19,7 +19,8 @@ function scriviTxt(car) {
     pos+=coda.length;
   }
   else {
-    testo=testo.substring(0,pos)+ car + testo.substring(pos+1);
+    //alert("pos "+pos);
+    testo=testo.substring(0,pos)+ car + testo.substring(pos);
     pos+=1;
   }
   document.getElementById("testo").value = testo;
