@@ -38,7 +38,7 @@ function muoviCursore(direzione) {
     //alert("pos"+pos);
     testo=testo.substring(0,pos)+ cursore + testo.substring(pos);
     document.getElementById("testo").value = testo;
-    mySelect(pos);
+    //mySelect(pos);
   }
 }
 function mySelect(position) {
