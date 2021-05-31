@@ -4,6 +4,7 @@
     <title>Illustrator</title>
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700;800&display=swap" rel="stylesheet">
+  <script src="//code.jquery.com/jquery-1.10.2.js"></script>
 </head>
 <body>
  <div class="tastiera">
@@ -29,12 +30,14 @@
    <div class="tasto" onclick="scriviTxt('-')">-</div><br>
    <div class="tasto" onclick="scriviTxt('>')">&gt</div>
    <div class="tasto" onclick="scriviTxt('x')">x</div>
-   <div class="tasto" style="width:18vw" onclick="scriviTxt(' ')">___</div>
-   <div class="tasto" onclick="muoviCursore(-1)">--</div>
-   <div class="tasto" onclick="muoviCursore(1)">+</div>
+   <div class="tasto" style="width:54vw" onclick="scriviTxt(' ')">_____</div>
  </div>
   <a href="https://docs.google.com/document/d/12QVBoBTFp7NUyzm3mmXX1KyOid-myt4_K6WE8-mMniI/edit?usp=sharing" target="_blank"> <div class="bottone"></div>
   </a>
+ <div id="underscore">
+   <div class="tasto" onclick="muoviCursore(-1)">-</div>
+   <div class="tasto" onclick="muoviCursore(1)">+</div>
+ </div>
  <textarea name="testo" id="testo"> </textarea>
  <div id="anteprima"></div>
  <script src="script.js"></script>
