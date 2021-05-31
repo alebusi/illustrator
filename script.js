@@ -26,7 +26,9 @@ function scriviTxt(car) {
   document.getElementById("testo").value = testo;
   testoAnteprima=intestazione+" "+testo.replace(intestazione,"").replace(coda,"")+coda;
   document.getElementById("anteprima").innerHTML=testoAnteprima;
+  //mySelect(pos);  
 }
+
 function muoviCursore(direzione) {
   testo=document.getElementById("testo").value;
   testo=testo.replace(cursore, "");
@@ -36,5 +38,14 @@ function muoviCursore(direzione) {
     //alert("pos"+pos);
     testo=testo.substring(0,pos)+ cursore + testo.substring(pos);
     document.getElementById("testo").value = testo;
+    mySelect(pos);
   }
+}
+function mySelect(position) {
+    var input = document.getElementById ("testo");
+            if ('selectionStart' in input) {
+                input.selectionStart = position;
+                input.selectionEnd = position+1;
+                input.focus ();
+            }
 }
