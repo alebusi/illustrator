@@ -42,10 +42,20 @@ function muoviCursore(direzione) {
   }
 }
 function mySelect(position) {
+  $("textarea:contains('_')").css("color","red");
+  /*
     var input = document.getElementById ("testo");
             if ('selectionStart' in input) {
+                input.style.userSelect="none";
                 input.selectionStart = position;
                 input.selectionEnd = position+1;
                 input.focus ();
+              //input.blur ();
             }
+    /*var input2 = document.getElementById ("asx");
+            if ('selectionStart' in input) {
+                input2.selectionStart = position;
+                input2.selectionEnd = position+1;
+                input2.focus ();
+            }*/
 }
