@@ -41,21 +41,21 @@ function muoviCursore(direzione) {
     //mySelect(pos);
   }
 }
+
 function mySelect(position) {
-  $("textarea:contains('_')").css("color","red");
-  /*
-    var input = document.getElementById ("testo");
-            if ('selectionStart' in input) {
-                input.style.userSelect="none";
-                input.selectionStart = position;
-                input.selectionEnd = position+1;
-                input.focus ();
-              //input.blur ();
-            }
-    /*var input2 = document.getElementById ("asx");
-            if ('selectionStart' in input) {
-                input2.selectionStart = position;
-                input2.selectionEnd = position+1;
-                input2.focus ();
-            }*/
+  a=1;
+}
+
+function cerchio() {
+  testo=document.getElementById("testo").value;
+  //posRaggio=testo.lastIndexOf("q");
+  raggio=testo.substring(testo.lastIndexOf("q")+1);
+  //alert("raggio "+raggio);
+  testoCerchio=" 0 " +raggio+" "  +raggio+
+               " t -"+raggio+" "  +raggio+
+               " t -"+raggio+" -" +raggio+
+               " t " +raggio+" -" +raggio+" z";
+  testo=testo+testoCerchio;
+  pos=testo.length;
+  document.getElementById("testo").value = testo;
 }
