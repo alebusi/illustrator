@@ -18,6 +18,10 @@ function scriviTxt(car) {
     testo=testo+coda;
     pos+=coda.length;
   }
+  else if (car == "O") {
+    cerchio();
+    pos=testo.length;
+  }
   else {
     //alert("pos "+pos);
     testo=testo.substring(0,pos)+ car + testo.substring(pos);
@@ -47,15 +51,11 @@ function mySelect(position) {
 }
 
 function cerchio() {
-  testo=document.getElementById("testo").value;
-  //posRaggio=testo.lastIndexOf("q");
   raggio=testo.substring(testo.lastIndexOf("q")+1);
-  //alert("raggio "+raggio);
+  raggio=raggio.replace(" ","");
   testoCerchio=" 0 " +raggio+" "  +raggio+
                " t -"+raggio+" "  +raggio+
                " t -"+raggio+" -" +raggio+
-               " t " +raggio+" -" +raggio+" z";
+               " t " +raggio+" -" +raggio+" z ";
   testo=testo+testoCerchio;
-  pos=testo.length;
-  document.getElementById("testo").value = testo;
 }
