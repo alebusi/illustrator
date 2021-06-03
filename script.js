@@ -54,8 +54,8 @@ function cerchio() {
   raggio=testo.substring(testo.lastIndexOf("q")+1);
   raggio=raggio.replace(" ","");
   testoCerchio=" 0 " +raggio+" "  +raggio+
-               " t -"+raggio+" "  +raggio+
-               " t -"+raggio+" -" +raggio+
-               " t " +raggio+" -" +raggio+" z ";
-  testo=testo+testoCerchio;
+               " t-"+raggio+" "  +raggio+
+               " t-"+raggio+" -" +raggio+
+               " t" +raggio+" -" +raggio+" z ";
+  testo=testo.trim()+testoCerchio;
 }
