@@ -13,11 +13,11 @@ function scriviTxt(car) {
     testo=testo.substring(0,pos) + testo.substring(pos+1);
   }
   else if (car == '<') {
-    testo=testo+'"/>'+nPath;
+    testo=testo+'"/> '+nPath;
     pos=testo.length;
   }
   else if (car == ">") {
-    testo=intestazione+testo+coda;
+    testo=intestazione+" "+nPath+" "+testo.replace(/_/g,"")+coda;
     pos=testo.length;
   }
   else if (car == "O") {
@@ -31,7 +31,7 @@ function scriviTxt(car) {
   }
   document.getElementById("testo").value = testo;
   testoAnteprima=intestazione+" "+griglia+" "+nPath+" "+
-                 testo.replace(intestazione,"").replace(coda,"")+coda;
+      testo.replace(nPath,"").replace(intestazione,"").replace(coda,"")+coda;
   //alert(testoAnteprima);
   document.getElementById("anteprima").innerHTML=testoAnteprima;
   //mySelect(pos);  
@@ -62,4 +62,8 @@ function cerchio() {
                " t-"+raggio+" -" +raggio+
                " t" +raggio+" -" +raggio+" z ";
   testo=testo.trim()+testoCerchio;
+}
+
+function myFunc() {
+  a=0;
 }
