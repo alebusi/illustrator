@@ -31,7 +31,7 @@ function scriviTxt(car) {
   }
   document.getElementById("testo").value = testo;
   testoAnteprima=intestazione+" "+griglia+" "+nPath+" "+
-      testo.replace(nPath,"").replace(intestazione,"").replace(coda,"")+coda;
+      testo.replace(intestazione,"").replace(coda,"")+coda;
   //alert(testoAnteprima);
   document.getElementById("anteprima").innerHTML=testoAnteprima;
   //mySelect(pos);  
