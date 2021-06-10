@@ -18,6 +18,8 @@ function scriviTxt(car) {
   }
   else if (car == ">") {
     testo=intestazione+" "+nPath+" "+testo.replace(/_/g,"")+coda;
+    testo=testo.replace(/\s+/g," ");
+    testo=testo.replace(/_/g,"");
     pos=testo.length;
   }
   else if (car == "O") {
