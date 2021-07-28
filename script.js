@@ -60,7 +60,6 @@ function cerchio() {
   ultposQ=testo.lastIndexOf("q");
   ultposH=testo.lastIndexOf("h");
   ultposL=testo.lastIndexOf("l");
-  alert("ultposQ :"+ultposQ);
   if (ultposQ > ultposH && ultposQ > ultposL) {
     operaz='q';
   }
