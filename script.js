@@ -57,13 +57,31 @@ function mySelect(position) {
 }
 
 function cerchio() {
-  raggio=testo.substring(testo.lastIndexOf("q")+1);
-  raggio=raggio.replace(" ","");
-  testoCerchio=" 0 " +raggio+" "  +raggio+
-               " t-"+raggio+" "  +raggio+
-               " t-"+raggio+" -" +raggio+
-               " t" +raggio+" -" +raggio+" z ";
-  testo=testo.trim()+testoCerchio;
+  ultposQ=testo.lastIndexOf("q");
+  ultposH=testo.lastIndexOf("h");
+  ultposL=testo.lastIndexOf("l");
+  alert("ultposQ :"+ultposQ);
+  if (ultposQ > ultposH && ultposQ > ultposL) {
+    operaz='q';
+  }
+  else if (ultposH > ultposL) {
+    operaz='h';
+  }
+  else {
+    operaz='l';
+  }
+  if (operaz == 'q') { 
+    raggio1=testo.substring(ultposQ+1,testo.lastIndexOf(" "));
+    raggio2=testo.substring(testo.lastIndexOf(" ")+1);
+    raggio1=raggio1.replace(" ","");
+    raggio2=raggio2.replace(" ","");
+    testoCerchio=" 0 " +raggio1+" "  +raggio2+
+                 " t-"+raggio1+" "  +raggio2+
+                 " t-"+raggio1+" -" +raggio2+
+                 " t" +raggio1+" -" +raggio2+" z ";
+    testo=testo.substring(0,testo.lastIndexOf(" "));
+    testo=testo.trim()+testoCerchio;
+  }
 }
 
 function myFunc() {
