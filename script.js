@@ -23,7 +23,7 @@ function scriviTxt(car) {
     pos=testo.length;
   }
   else if (car == "O") {
-    cerchio();
+    figura();
     pos=testo.length;
   }
   else {
@@ -43,7 +43,11 @@ function muoviCursore(direzione) {
   testo=document.getElementById("testo").value;
   testo=testo.replace(cursore, "");
   //alert("pos"+pos+"lt "+testo.length);
-  if (pos+direzione >-1 && pos+direzione <= testo.length) {
+  if (direzione == 99) {
+    testo=testo+cursore;
+    pos=testo.length-1;
+    document.getElementById("testo").value = testo;
+  } else if (pos+direzione >-1 && pos+direzione <= testo.length) {
     pos=pos+direzione;
     //alert("pos"+pos);
     testo=testo.substring(0,pos)+ cursore + testo.substring(pos);
@@ -56,17 +60,15 @@ function mySelect(position) {
   a=1;
 }
 
-function cerchio() {
+function figura() {
   ultposQ=testo.lastIndexOf("q");
   ultposH=testo.lastIndexOf("h");
   ultposL=testo.lastIndexOf("l");
   if (ultposQ > ultposH && ultposQ > ultposL) {
     operaz='q';
-  }
-  else if (ultposH > ultposL) {
+  } else if (ultposH > ultposL) {
     operaz='h';
-  }
-  else {
+  } else {
     operaz='l';
   }
   if (operaz == 'q') { 
@@ -80,6 +82,21 @@ function cerchio() {
                  " t" +raggio1+" -" +raggio2+" z ";
     testo=testo.substring(0,testo.lastIndexOf(" "));
     testo=testo.trim()+testoCerchio;
+  } else if (operaz == 'l') {
+    raggio1=testo.substring(ultposL+1,testo.lastIndexOf(" "));
+    raggio2=testo.substring(testo.lastIndexOf(" ")+1);
+    raggio1=raggio1.replace(" ","");
+    raggio2=raggio2.replace(" ","");
+    testoCerchio=" l-"+raggio1+" "  +raggio2+
+                 " l-"+raggio1+" -" +raggio2+
+                 " z ";
+    testo=testo.trim()+testoCerchio;    
+  } else if (operaz == 'h') {
+    lato=testo.substring(ultposH+1);
+    testoLato=" v "+lato+
+                 " h-"+lato+
+                 " z ";
+    testo=testo.trim()+testoLato;    
   }
 }
 
