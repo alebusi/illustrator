@@ -72,6 +72,10 @@ html, body {
   height: 9vw;
 }
 
+#underscore svg:hover {
+  animation: mymoveSelection 2s;
+}
+
 #underscore path {
     fill: black;
     stroke: white;
