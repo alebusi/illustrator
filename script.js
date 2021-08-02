@@ -6,7 +6,8 @@ var testo="";
 var pos=0;
 var cursore="_";
 
-function scriviTxt(car) {
+function scriviTxt(elem,car) {
+  elem.className="tasto";
   testo=document.getElementById("testo").value;
   if (car == "x") {
     pos-=1;
