@@ -24,13 +24,24 @@ html, body {
     height: 130px;
     text-align: center;
     font-size: 100px;
+    animation: mymoveSelection 2s;
 }
 
-.tasto:hover {
-  animation: mymoveSelection 2s;
+.tasto2 {
+    display: inline-block;
+    width: 18vw;
+    height: 130px;
+    text-align: center;
+    font-size: 100px;
+    animation: mymoveSelection2 2s;
 }
 
 @keyframes mymoveSelection {
+  0%   {background-color: orange;}
+  100% {background-color: black;}
+}
+
+@keyframes mymoveSelection2 {
   0%   {background-color: orange;}
   100% {background-color: black;}
 }
