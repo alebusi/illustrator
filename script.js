@@ -7,7 +7,11 @@ var pos=0;
 var cursore="_";
 
 function scriviTxt(elem,car) {
-  elem.className="tasto";
+  if (elem.className == "tasto") {
+    elem.className = "tasto2";
+  } else {
+    elem.className="tasto";
+  }
   testo=document.getElementById("testo").value;
   if (car == "x") {
     pos-=1;
