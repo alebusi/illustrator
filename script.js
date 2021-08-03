@@ -9,7 +9,7 @@ var cursore="_";
 function scriviTxt(elem,car) {
   if (elem.className == "tasto") {
     elem.className = "tasto2";
-  } else {
+  } else if (elem.className == "tasto2") {
     elem.className="tasto";
   }
   testo=document.getElementById("testo").value;
