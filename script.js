@@ -5,7 +5,7 @@ var nPath='<path d=\"M 0 0';
 var testo="";
 var pos=0;
 var cursore="_";
-var ix=0;
+var ix=1;
 
 function scriviTxt(elem,car) {
   if (elem.className == "tasto") {
@@ -19,11 +19,11 @@ function scriviTxt(elem,car) {
     testo=testo.substring(0,pos) + testo.substring(pos+1);
   }
   else if (car == '<') {
-    testo=testo+'"/> '+aggPath();
+    testo=testo+'"/> '+aggPath(0);
     pos=testo.length;
   }
   else if (car == ">") {
-    testo=intestazione+" "+nPath+" "+testo.replace(/_/g,"")+coda;
+    testo=intestazione+" "+aggPath(1)+" "+testo.replace(/_/g,"")+coda;
     testo=testo.replace(/\s+/g," ");
     testo=testo.replace(/_/g,"");
     pos=testo.length;
@@ -106,8 +106,9 @@ function figura() {
   }
 }
 
-function aggPath() {
+function aggPath(Indice) {
   ix++;
+  if (Indice == 1) ix=1;
   nPath='<path id="i'+ix+'" d=\"M 0 0';
   return nPath;
 }
