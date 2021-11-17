@@ -23,7 +23,7 @@ function scriviTxt(elem,car) {
     pos=testo.length;
   }
   else if (car == ">") {
-    testo=intestazione+" "+aggPath()+" "+testo.replace(/_/g,"")+coda;
+    testo=intestazione+" "+nPath+" "+testo.replace(/_/g,"")+coda;
     testo=testo.replace(/\s+/g," ");
     testo=testo.replace(/_/g,"");
     pos=testo.length;
@@ -38,7 +38,7 @@ function scriviTxt(elem,car) {
     pos+=1;
   }
   document.getElementById("testo").value = testo;
-  testoAnteprima=intestazione+" "+griglia+" "+aggPath()+" "+
+  testoAnteprima=intestazione+" "+griglia+" "+nPath+" "+
       testo.replace(intestazione,"").replace(coda,"")+coda;
   //alert(testoAnteprima);
   document.getElementById("anteprima").innerHTML=testoAnteprima;
