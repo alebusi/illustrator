@@ -5,6 +5,7 @@ var nPath='<path d=\"M 0 0';
 var testo="";
 var pos=0;
 var cursore="_";
+var ix=0;
 
 function scriviTxt(elem,car) {
   if (elem.className == "tasto") {
@@ -18,11 +19,11 @@ function scriviTxt(elem,car) {
     testo=testo.substring(0,pos) + testo.substring(pos+1);
   }
   else if (car == '<') {
-    testo=testo+'"/> '+nPath;
+    testo=testo+'"/> '+aggPath();
     pos=testo.length;
   }
   else if (car == ">") {
-    testo=intestazione+" "+nPath+" "+testo.replace(/_/g,"")+coda;
+    testo=intestazione+" "+aggPath()+" "+testo.replace(/_/g,"")+coda;
     testo=testo.replace(/\s+/g," ");
     testo=testo.replace(/_/g,"");
     pos=testo.length;
@@ -37,7 +38,7 @@ function scriviTxt(elem,car) {
     pos+=1;
   }
   document.getElementById("testo").value = testo;
-  testoAnteprima=intestazione+" "+griglia+" "+nPath+" "+
+  testoAnteprima=intestazione+" "+griglia+" "+aggPath()+" "+
       testo.replace(intestazione,"").replace(coda,"")+coda;
   //alert(testoAnteprima);
   document.getElementById("anteprima").innerHTML=testoAnteprima;
@@ -103,6 +104,11 @@ function figura() {
                  " z ";
     testo=testo.trim()+testoLato;    
   }
+}
+
+function aggPath() {
+  nPath='<path id=i'+ix+' d=\"M 0 0';
+  return nPath;
 }
 
 function myFunc() {
