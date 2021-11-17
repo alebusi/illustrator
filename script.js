@@ -107,6 +107,7 @@ function figura() {
 }
 
 function aggPath() {
+  ix++;
   nPath='<path id=i'+ix+' d=\"M 0 0';
   return nPath;
 }
