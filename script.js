@@ -23,7 +23,11 @@ function scriviTxt(elem,car) {
     testo=testo+'"/> '+aggPath(0);
     pos=testo.length;
   }
-  else if (car == ">") {
+  else if (car == "C") {
+    figura();
+    pos=testo.length;
+  }
+  else if (car == "I") {
     testo=testo + copia;
     pos=testo.length;
   }
