@@ -5,6 +5,7 @@ var nPath='<path d=\"M 0 0';
 var testo="";
 var pos=0;
 var cursore="_";
+var copia;
 var ix=1;
 
 function scriviTxt(elem,car) {
@@ -70,12 +71,15 @@ function figura() {
   ultposQ=testo.lastIndexOf("q");
   ultposH=testo.lastIndexOf("h");
   ultposL=testo.lastIndexOf("l");
-  if (ultposQ > ultposH && ultposQ > ultposL) {
+  ultposT=testo.lastIndexOf("t");
+  if (ultposQ > ultposH && ultposQ > ultposL && ultposQ > ultposT) {
     operaz='q';
-  } else if (ultposH > ultposL) {
+  } else if (ultposH > ultposL && ultposH > ultposT) {
     operaz='h';
-  } else {
+  } else if (ultposL > ultposT) {
     operaz='l';
+  } else {
+    operaz = "t";
   }
   if (operaz == 'q') { 
     raggio1=testo.substring(ultposQ+1,testo.lastIndexOf(" "));
@@ -103,6 +107,9 @@ function figura() {
                  " h-"+lato+
                  " z ";
     testo=testo.trim()+testoLato;    
+  } else if (operaz == 't') {
+    copia=testo.substring(ultposT+1);
+    testo=testo.substring(0,testo.lastIndexOf("t"));
   }
 }
 
