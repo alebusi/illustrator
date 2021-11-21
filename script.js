@@ -23,7 +23,7 @@ function scriviTxt(elem,car) {
     testo=testo+'"/> '+aggPath(0);
     pos=testo.length;
   }
-  else if (car == "C") {
+  else if (car == "c") {
     ultposT=testo.lastIndexOf("t");
     if (ultposT > -1) {
        copia=testo.substring(ultposT+1);
@@ -31,7 +31,7 @@ function scriviTxt(elem,car) {
        pos=testo.length;
     }
   }
-  else if (car == "I") {
+  else if (car == "i") {
     testo=testo + copia;
     pos=testo.length;
   }
