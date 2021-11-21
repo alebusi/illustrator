@@ -24,8 +24,12 @@ function scriviTxt(elem,car) {
     pos=testo.length;
   }
   else if (car == "C") {
-    figura();
-    pos=testo.length;
+    ultposT=testo.lastIndexOf("t");
+    if (ultposT > -1) {
+       copia=testo.substring(ultposT+1);
+       testo=testo.substring(0,ultposT);
+       pos=testo.length;
+    }
   }
   else if (car == "I") {
     testo=testo + copia;
@@ -79,15 +83,12 @@ function figura() {
   ultposQ=testo.lastIndexOf("q");
   ultposH=testo.lastIndexOf("h");
   ultposL=testo.lastIndexOf("l");
-  ultposT=testo.lastIndexOf("t");
-  if (ultposQ > ultposH && ultposQ > ultposL && ultposQ > ultposT) {
+  if (ultposQ > ultposH && ultposQ > ultposL) {
     operaz='q';
-  } else if (ultposH > ultposL && ultposH > ultposT) {
+  } else if (ultposH > ultposL) {
     operaz='h';
-  } else if (ultposL > ultposT) {
-    operaz='l';
   } else {
-    operaz = "t";
+    operaz = "l";
   }
   if (operaz == 'q') { 
     raggio1=testo.substring(ultposQ+1,testo.lastIndexOf(" "));
@@ -115,9 +116,6 @@ function figura() {
                  " h-"+lato+
                  " z ";
     testo=testo.trim()+testoLato;    
-  } else if (operaz == 't' && ultposT > -1) {
-    copia=testo.substring(ultposT+1);
-    testo=testo.substring(0,ultposT);
   }
 }
 
