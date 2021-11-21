@@ -115,9 +115,9 @@ function figura() {
                  " h-"+lato+
                  " z ";
     testo=testo.trim()+testoLato;    
-  } else if (operaz == 't') {
+  } else if (operaz == 't' && ultposT > -1) {
     copia=testo.substring(ultposT+1);
-    testo=testo.substring(0,testo.lastIndexOf("t"));
+    testo=testo.substring(0,ultposT);
   }
 }
 
