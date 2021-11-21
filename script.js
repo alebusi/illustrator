@@ -24,6 +24,10 @@ function scriviTxt(elem,car) {
     pos=testo.length;
   }
   else if (car == ">") {
+    testo=testo + copia;
+    pos=testo.length;
+  }
+  else if (car == ">") {
     testo=intestazione+" "+aggPath(1)+" "+testo.replace(/_/g,"")+coda;
     testo=testo.replace(/\s+/g," ");
     testo=testo.replace(/_/g,"");
