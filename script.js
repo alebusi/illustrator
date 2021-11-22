@@ -67,7 +67,7 @@ function muoviCursore(direzione) {
     pos=testo.length;
     document.getElementById("testo").value = testo;
   }
-  else if (direzione == 10) {
+  else if (direzione == -10) {
     pos=0;
     //alert("pos"+pos);
     testo=cursore + testo.substring(pos); 
