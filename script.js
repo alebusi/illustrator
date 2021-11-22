@@ -63,13 +63,17 @@ function muoviCursore(direzione) {
   testo=testo.replace(cursore, "");
   //alert("pos"+pos+"lt "+testo.length);
   if (direzione == 99) {
-    testo=testo+cursore;
-    pos=testo.length-1;
+    //testo=testo+cursore;
+    pos=testo.length;
     document.getElementById("testo").value = testo;
-  } else if (pos+direzione >-1 && pos+direzione <= testo.length) {
-    pos=pos+direzione;
+  } 
+  else if (direzione = 10) {
+    //else if (pos+direzione >-1 && pos+direzione <= testo.length) {
+    //pos=pos+direzione;
+    //testo=testo.substring(0,pos)+ cursore + testo.substring(pos);
+    pos=0;    
     //alert("pos"+pos);
-    testo=testo.substring(0,pos)+ cursore + testo.substring(pos);
+    testo=cursore + testo.substring(pos);
     document.getElementById("testo").value = testo;
     //mySelect(pos);
   }
