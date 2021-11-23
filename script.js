@@ -1,6 +1,7 @@
 var intestazione='<svg viewBox="-10 -10 120 120">';
 var coda="\" /></svg>";
-var griglia='<path id="griglia" d=\"M0 0 h100 m0 0 v100 m0 0 h-100 m0 0 v-100 m25 0 v100 M50 0 v100 M75 0 v100 M0 25 h100 M0 50 h100 M0 75 h100"/>';
+//var griglia='<path id="griglia" d=\"M0 0 h100 m0 0 v100 m0 0 h-100 m0 0 v-100 m25 0 v100 M50 0 v100 M75 0 v100 M0 25 h100 M0 50 h100 M0 75 h100"/>';
+var griglia='<path id="griglia" d="M 0 0 v100 m10 -100v100 m10 -100v100 m10 -100v100 m10 -100v100 m10 -100v100 m10 -100v100 m10 -100v100 m10 -100v100 m10 -100v100 m10 -100M0 0 h100 m-100 10h100 m-100 10h100 m-100 10h100 m-100 10h100 m-100 10h100 m-100 10h100 m-100 10h100 m-100 10h100 m-100 10h100 m-100 10h100 m0 0 v-100" />;
 var nPath='<path d=\"M 0 0';
 var testo="";
 var pos=0;
