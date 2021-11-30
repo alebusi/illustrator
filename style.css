@@ -53,7 +53,6 @@ html, body {
   position: relative;
   margin-top: 100px;
   margin-left: 4vw;
-  margin-bottom: 10vh;
   font-size: 50px;
   font-family: 'Open Sans', sans-serif;
   color: white;
@@ -61,11 +60,10 @@ html, body {
 }
 
 #underscore {
+  display: inline-block;
   width: 9vw;
-  top: 1160px;
-  left: 86vw;
-  position: absolute;
-  margin-bottom: 10vh;
+  margin-left: 4vw;
+  position: relative;
   font-size: 70px;
   font-family: 'Open Sans', sans-serif;
   color: white;
@@ -127,9 +125,9 @@ path {
 
 #anteprima {
     height: 600px;
-    top: 2100px;
-    left: 10vw;
-    position: absolute;
+    margin-top: 100px;
+    margin-left: 4vw;
+    position: relative;
 }
 
 #paginagiu {
