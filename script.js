@@ -28,7 +28,7 @@ function scriviTxt(elem,car) {
     ultposX=testo.lastIndexOf("x");
     if (ultposX > -1) {
        copia=testo.substring(ultposX+1);
-       copia=replace(copia,"_");
+       copia=copia.replace("_","");
        testo=testo.substring(0,ultposX);
        pos=testo.length;
     }
