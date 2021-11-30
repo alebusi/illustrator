@@ -2,6 +2,7 @@ html, body {
     background-color: black;
     color: white;
     font-family: 'Open Sans', sans-serif;
+    padding-bottom: 10vh;
     /*overflow: hidden;*/
 }
 
@@ -95,9 +96,9 @@ html, body {
 .bottone {
   width: 80px;
   height: 80px;
-  top: 900px;
-  left: 10vw;
-  position: absolute;
+  margin-top: 100px;
+  margin-left: 4vw;
+  position: relative;
   background-color: orange;
 }
 
