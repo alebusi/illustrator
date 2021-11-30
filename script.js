@@ -48,6 +48,7 @@ function scriviTxt(elem,car) {
   }
   else {
     //alert("pos "+pos);
+    if (car == "w") car="x";
     testo=testo.substring(0,pos)+ car + testo.substring(pos);
     pos+=1;
   }
