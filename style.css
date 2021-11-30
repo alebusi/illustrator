@@ -50,9 +50,9 @@ html, body {
 #testo {
   width: 72vw;
   height: 800px;
-  top: 1160px;
-  left: 10vw;
-  position: absolute;
+  position: relative;
+  margin-top: 100px;
+  margin-left: 4vw;
   margin-bottom: 10vh;
   font-size: 50px;
   font-family: 'Open Sans', sans-serif;
