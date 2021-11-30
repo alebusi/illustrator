@@ -25,10 +25,10 @@ function scriviTxt(elem,car) {
     pos=testo.length;
   }
   else if (car == "c") {
-    ultposT=testo.lastIndexOf("t");
-    if (ultposT > -1) {
-       copia=testo.substring(ultposT+1);
-       testo=testo.substring(0,ultposT);
+    ultposX=testo.lastIndexOf("x");
+    if (ultposX > -1) {
+       copia=testo.substring(ultposX+1);
+       testo=testo.substring(0,ultposX);
        pos=testo.length;
     }
   }
