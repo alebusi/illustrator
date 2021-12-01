@@ -15,7 +15,7 @@ function eliminaCarattere(elem) {
 		catch(err){}
     myTimer = setInterval(function() {
 		   scriviTxt(elem,'x'); 
-	  }, 200);
+	  }, 300);
 }
 
 function resetInt() {
