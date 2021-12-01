@@ -75,6 +75,15 @@ function scriviTxt(elem,car) {
   //mySelect(pos);  
 }
 
+function muoviCur(direzione) {
+    muoviCursore(direzione);
+    try {clearInterval(myTimer);}
+		catch(err){}
+    myTimer = setInterval(function() {
+	muoviCursore(direzione); 
+	  }, 300);
+}
+
 function muoviCursore(direzione) {
   testo=document.getElementById("testo").value;
   testo=testo.replace(cursore, "");
