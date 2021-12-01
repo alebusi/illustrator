@@ -41,7 +41,7 @@
    <div onclick="muoviCursore(-10)"><svg viewBox="-10 -10 120 120"> <path d="M 0 0 M75 25 l-50 25 l50 25 M25 25 v50" /></svg></div>
    <div onclick="muoviCursore(99)"><svg viewBox="-10 -10 120 120"> <path d="M 0 0 M25 25 l50 25 l-50 25 M75 25 v50" /></svg></div>
    <div onclick="scriviTxt(this,'w')"><svg viewBox="-10 -10 120 120"> <path d="M 80 20 l-60 60"/></svg></div>
-   <div onclick="scriviTxt(this,'x')"><svg viewBox="-10 -10 120 120"> <path d="M 0 0 M80 20 v60 h-50 l-20 -30 l20 -30 z"/> <path d="M 0 0M65 35 l-30 30 m0 -30 l30 30" /></svg></div>
+   <div ontouchstart="eliminaCarattere(this)" ontouchend="resetInt()"><svg viewBox="-10 -10 120 120"> <path d="M 0 0 M80 20 v60 h-50 l-20 -30 l20 -30 z"/> <path d="M 0 0M65 35 l-30 30 m0 -30 l30 30" /></svg></div>
    <div onclick="scriviTxt(this,'f')"><svg viewBox="-10 -10 120 120"> <path d="M 25 25 h50 v50 h-50 z"/></svg></div>
  </div>
  <div id="anteprima" onclick="myFunc()"></div>
