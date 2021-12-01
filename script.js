@@ -9,6 +9,20 @@ var cursore="_";
 var copia;
 var ix=1;
 
+function eliminaCarattere(elem) {
+    scriviTxt(elem,'x');
+    try {clearInterval(myTimer);}
+		catch(err){}
+    myTimer = setInterval(function() {
+		   scriviTxt(elem,'x'); 
+	  }, 200);
+}
+
+function resetInt() {
+    try {clearInterval(myTimer);}
+		catch(err){}
+}
+
 function scriviTxt(elem,car) {
   if (elem.className == "tasto") {
     elem.className = "tasto2";
