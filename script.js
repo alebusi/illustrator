@@ -144,7 +144,7 @@ function figura() {
 }
 
 function aggPath(Indice) {
-  ix++;
+  ix=ix+1;
   if (Indice == 1) ix=1;
   nPath='<path class="i'+ix+'" d=\"M 0 0';
   return nPath;
