@@ -138,3 +138,19 @@ path {
     width: 50px;
     height: 50px;
 }
+
+.i1 {
+    fill: red;
+}
+.i2 {
+    fill: orange;
+}
+.i3 {
+    fill: yellow;
+}
+.i4 {
+    fill: lime;
+}
+.i5 {
+    fill: Cornflower blue;
+}
