@@ -35,8 +35,10 @@ function scriviTxt(elem,car) {
     testo=testo.substring(0,pos) + testo.substring(pos+1);
   }
   else if (car == '<') {
-    testo=testo+'"/> '+aggPath(0);
-    pos=testo.length;
+    //testo=testo+'"/> '+aggPath(0);
+    testo1=testo.substring(0,pos).replace(cursore,"")+ '"/> '+aggPath(0) + cursore;
+    testo=testo1 + testo.substring(pos);
+    pos=testo1.length;
   }
   else if (car == "c") {
     ultposX=testo.lastIndexOf("x");
