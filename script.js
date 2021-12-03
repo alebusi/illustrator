@@ -35,14 +35,12 @@ function scriviTxt(elem,car) {
     testo=testo.substring(0,pos) + testo.substring(pos+1);
   }
   else if (car == '<') {
-    testo=testo+'"/> '+aggPath(0);
-    /*
+    //testo=testo+'"/> '+aggPath(0);
     testo1=testo.substring(0,pos)+ '"/> '+aggPath(0);
-    testo1=testo1.replace(cursore,"")+cursore;
+    //testo1=testo1.replace(cursore,"")+cursore;
     testo=testo1 + testo.substring(pos);
-    pos=testo1.length;
-    */
     pos=testo.length;
+    //pos=testo.length;
   }
   else if (car == "c") {
     ultposX=testo.lastIndexOf("x");
