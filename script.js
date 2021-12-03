@@ -36,7 +36,8 @@ function scriviTxt(elem,car) {
   }
   else if (car == '<') {
     //testo=testo+'"/> '+aggPath(0);
-    testo1=testo.substring(0,pos).replace(cursore,"")+ '"/> '+aggPath(0) + cursore;
+    testo1=testo.substring(0,pos).replace(cursore,"")+ '"/> '+aggPath(0);
+    testo1=testo1.replace(cursore,"")+cursore;
     testo=testo1 + testo.substring(pos);
     pos=testo1.length;
   }
