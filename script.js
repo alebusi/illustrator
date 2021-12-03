@@ -39,7 +39,7 @@ function scriviTxt(elem,car) {
     testo1=testo.substring(0,pos)+ '"/> '+aggPath(0);
     //testo1=testo1.replace(cursore,"")+cursore;
     testo=testo1 + testo.substring(pos);
-    pos=testo.length;
+    pos=testo1.length;
     //pos=testo.length;
   }
   else if (car == "c") {
