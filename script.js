@@ -133,14 +133,14 @@ function figura() {
     raggio1=raggio1.replace(" ","");
     raggio2=raggio2.replace(" ","");
     if (raggio1 != raggio2) {
-	testo=testo.substring(0,testo.lastIndexOf("q")-1);
+        testo=testo.substring(0,testo.lastIndexOf(" "));
         testoCerchio=" 0 " +raggio1+" "  +raggio2+
                  " t-"+raggio1+" "  +raggio2+
                  " t-"+raggio1+" -" +raggio2+
                  " t" +raggio1+" -" +raggio2+" z ";
     }
     else {
-        testo=testo.substring(0,testo.lastIndexOf(" "));
+	testo=testo.substring(0,testo.lastIndexOf("q")-1);
 	testoCerchio=" a" +raggio1+" "+raggio2+
                      " 0 1 0 "+toString(parseInt(raggio1*2))+" 0 "+
 		     " a" +raggio1+" "+raggio2+
