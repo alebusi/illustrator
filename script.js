@@ -170,7 +170,7 @@ function figura() {
     lato1=testo.substring(ultposH+1,testo.lastIndexOf(" "));
     lato2=testo.substring(testo.lastIndexOf(" ")+1);
     testoRett=" v"+lato2+
-                 " h-"+lato1+
+                 " h"+String(parseInt(lato1)*-1)+
                  " z ";
     testo=testo.substring(0,testo.lastIndexOf(" "));
     testo=testo.trim()+testoRett;    
