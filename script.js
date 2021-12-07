@@ -132,11 +132,20 @@ function figura() {
     raggio2=testo.substring(testo.lastIndexOf(" ")+1);
     raggio1=raggio1.replace(" ","");
     raggio2=raggio2.replace(" ","");
-    testoCerchio=" 0 " +raggio1+" "  +raggio2+
+    if (raggio1 == raggio2) {
+	testo=testo.substring(0,testo.lastIndexOf("q")-1);
+        testoCerchio=" 0 " +raggio1+" "  +raggio2+
                  " t-"+raggio1+" "  +raggio2+
                  " t-"+raggio1+" -" +raggio2+
                  " t" +raggio1+" -" +raggio2+" z ";
-    testo=testo.substring(0,testo.lastIndexOf(" "));
+    }
+    else {
+        testo=testo.substring(0,testo.lastIndexOf(" "));
+	testoCerchio=" a" +raggio1+" "+raggio2+
+                     " 0 1 0 "+toString(parseInt(raggio1*2))+" 0 "+
+		     " a" +raggio1+" "+raggio2+
+                     " 0 1 0 "+toString(parseInt(-raggio1*2))+" 0"
+    }
     testo=testo.trim()+testoCerchio;
   } else if (operaz == 'l') { 	/* per Rombo */
     raggio1=testo.substring(ultposL+1,testo.lastIndexOf(" "));
@@ -160,7 +169,7 @@ function figura() {
   } else if (operaz == 'h') {  /* per rettangolo e quadrato */
     lato1=testo.substring(ultposH+1,testo.lastIndexOf(" "));
     lato2=testo.substring(testo.lastIndexOf(" ")+1);
-    testoRett=" v "+lato2+
+    testoRett=" v"+lato2+
                  " h-"+lato1+
                  " z ";
     testo=testo.substring(0,testo.lastIndexOf(" "));
