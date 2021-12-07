@@ -132,7 +132,7 @@ function figura() {
     raggio2=testo.substring(testo.lastIndexOf(" ")+1);
     raggio1=raggio1.replace(" ","");
     raggio2=raggio2.replace(" ","");
-    if (raggio1 == raggio2) {
+    if (raggio1 != raggio2) {
 	testo=testo.substring(0,testo.lastIndexOf("q")-1);
         testoCerchio=" 0 " +raggio1+" "  +raggio2+
                  " t-"+raggio1+" "  +raggio2+
