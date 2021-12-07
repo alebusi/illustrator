@@ -142,7 +142,7 @@ function figura() {
     else {
 	testo=testo.substring(0,testo.lastIndexOf("q")-1);
 	testoCerchio=" a" +raggio1+" "+raggio2+
-                     " 0 1 0 "+String(parseInt(raggio1)*2)+" 0 "+
+                     " 0 1 0 "+String(parseInt(raggio1)*2)+" 0"+
 		     " a" +raggio1+" "+raggio2+
                      " 0 1 0 "+String(parseInt(raggio1)*-2)+" 0"
     }
