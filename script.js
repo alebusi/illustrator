@@ -120,14 +120,14 @@ function figura() {
   ultposQ=testo.lastIndexOf("q");
   ultposH=testo.lastIndexOf("h");
   ultposL=testo.lastIndexOf("l");
-  if (ultposQ > ultposH && ultposQ > ultposL) {
-    operaz='q';
-  } else if (ultposH > ultposL) {
-    operaz='h';
-  } else {
-    operaz = "l";
+  ultposV=testo.lastIndexOf("v");
+  switch (Math.max(ultposQ, ultposH, ultposL, ultposV)) {
+     case ultposQ: operaz='q';break;
+     case ultposH: operaz='h';break;
+     case ultposL: operaz='l';break;
+     case ultposV: operaz='v';break;
   }
-  if (operaz == 'q') { 
+  if (operaz == 'q') { 		/* per cerchio */
     raggio1=testo.substring(ultposQ+1,testo.lastIndexOf(" "));
     raggio2=testo.substring(testo.lastIndexOf(" ")+1);
     raggio1=raggio1.replace(" ","");
@@ -138,7 +138,7 @@ function figura() {
                  " t" +raggio1+" -" +raggio2+" z ";
     testo=testo.substring(0,testo.lastIndexOf(" "));
     testo=testo.trim()+testoCerchio;
-  } else if (operaz == 'l') {
+  } else if (operaz == 'l') { 	/* per Rombo */
     raggio1=testo.substring(ultposL+1,testo.lastIndexOf(" "));
     raggio2=testo.substring(testo.lastIndexOf(" ")+1);
     raggio1=raggio1.replace(" ","");
@@ -146,13 +146,25 @@ function figura() {
     testoCerchio=" l-"+raggio1+" "  +raggio2+
                  " l-"+raggio1+" -" +raggio2+
                  " z ";
-    testo=testo.trim()+testoCerchio;    
-  } else if (operaz == 'h') {
-    lato=testo.substring(ultposH+1);
-    testoLato=" v "+lato+
-                 " h-"+lato+
+    testo=testo.trim()+testoCerchio;   
+  } else if (operaz == 'v') {
+    larghezza=testo.substring(ultposV+1,testo.lastIndexOf(" "));
+    altezza=testo.substring(testo.lastIndexOf(" ")+1);
+    profondita=testo.substring(testo.lastIndexOf(" ")+1);
+    raggio1=raggio1.replace(" ","");
+    raggio2=raggio2.replace(" ","");
+    testoCerchio=" l-"+raggio1+" "  +raggio2+
+                 " l-"+raggio1+" -" +raggio2+
                  " z ";
-    testo=testo.trim()+testoLato;    
+    testo=testo.trim()+testoCerchio;   
+  } else if (operaz == 'h') {  /* per rettangolo e quadrato */
+    lato1=testo.substring(ultposH+1,testo.lastIndexOf(" "));
+    lato2=testo.substring(testo.lastIndexOf(" ")+1);
+    testoRett=" v "+lato2+
+                 " h-"+lato1+
+                 " z ";
+    testo=testo.substring(0,testo.lastIndexOf(" "));
+    testo=testo.trim()+testoRett;    
   }
 }
 
