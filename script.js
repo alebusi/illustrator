@@ -178,9 +178,13 @@ function figura() {
 }
 
 function aggPath(Indice) {
-  ix=ix+1;
-  if (Indice == 1) ix=1;
-  nPath='<path class="i'+ix+'" d=\"M 0 0';
+  if (testo.substring(text.length - 2) == 't') {
+     ix=testo.substring(text.length - 1);
+  } else {  
+     ix=ix+1;
+     if (Indice == 1) ix=1;
+  }
+  nPath='<path class="i'+ix+'" d=\"M'; /* 0 0'; */
   return nPath;
 }
 
