@@ -178,9 +178,9 @@ function figura() {
 }
 
 function aggPath(Indice) {
-  if (testo.substring(testo.length - 2) == 't') {
-     ix=testo.substring(testo.length - 1);
-     testo2=testo.substr(0,testo.length - 2);
+  if (testo.substr(testo.length-2,1) == 't') {
+     ix=testo.substr(testo.length-1,1);
+     testo2=testo.substr(0,testo.length-2);
      testo=testo2;
   } else {  
      ix=ix+1;
