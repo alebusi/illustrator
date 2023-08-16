@@ -178,8 +178,10 @@ function figura() {
 }
 
 function aggPath(Indice) {
-  if (testo.substring(text.length - 2) == 't') {
-     ix=testo.substring(text.length - 1);
+  if (testo.substring(testo.length - 2) == 't') {
+     ix=testo.substring(testo.length - 1);
+     testo2=testo.substr(0,testo.length - 2);
+     testo=testo2;
   } else {  
      ix=ix+1;
      if (Indice == 1) ix=1;
