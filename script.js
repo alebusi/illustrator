@@ -178,15 +178,17 @@ function figura() {
 }
 
 function aggPath(Indice) {
+  var iy=1;
   if (testo.substr(testo.length-2,1) == 't') {
-     ix=testo.substr(testo.length-1,1);
+     iy=testo.substr(testo.length-1,1);
      testo2=testo.substr(0,testo.length-2);
      testo=testo2;
+     nPath='<path class="i'+iy+'" d=\"M';
   } else {  
      ix=ix+1;
      if (Indice == 1) ix=1;
+     nPath='<path class="i'+ix+'" d=\"M'; /* 0 0'; */
   }
-  nPath='<path class="i'+ix+'" d=\"M'; /* 0 0'; */
   return nPath;
 }
 
